@@ -1,0 +1,3 @@
+#+TITLE: Readme
+
+This is a collection of files for properly setting up LaTeX-based text editing while conforming to the standards of the Social Sciences Division on the Universität Hamburg.

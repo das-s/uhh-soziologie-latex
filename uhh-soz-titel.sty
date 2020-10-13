@@ -1,0 +1,38 @@
+% Copyright note: This package defines a valid title page
+% for the UHH, specifically for social sciences
+\ProvidesPackage{uhh-soz-title}[2020/10/13 v.01]
+\RequirePackage{graphicx}
+\newcommand*{\project}[1]{\gdef\@project{#1}%
+}
+\newcommand*{\@project}{Final Year Project}
+\newcommand*{\supervisor}[1]{\gdef\@supervisor{#1}%
+}
+\newcommand*{\@supervisor}{\texttt{\string\supervisor} nicht gesetzt. Bitte korrigieren.}
+
+\renewcommand*{\maketitle}{%
+  \begin{titlepage}
+    \begin{minipage}[c]{60mm}
+      \includegraphics[width=60mm]{logo}\par
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{8cm}
+      {\singlespacing\raggedleft{Universit\"at Hamburg\par
+      Fakult\"at für Wirtschafts-\par
+      und Sozialwissenschaften\\}}
+    \end{minipage}
+    {\centering
+      \\\vspace{30mm}
+      Hausarbeit zum Thema\\
+      \vspace{7mm}
+      \textbf{\Huge{\@title\\}}
+      \vspace{54mm}
+      {\raggedleft\large{\bfseries{betreut von\\}}\@supervisor\\}
+      \vspace{7mm}
+      \flushleft\large{{\bfseries{Verfasser\\}}\@author\\}
+      \vspace{14mm}
+      {\centering\textit{Hamburg, \@date\\}}
+      \vfill
+    }
+  \end{titlepage}
+}
+\endinput
